@@ -87,7 +87,7 @@ body {
 /* section 1 */
 
 .section-1{
-    background-image: url(assets/hmebg.jpg);
+    background-image: url('assets/hmebg.jpg');
     color: #ffffff;   
     text-align: center;
     background-size: cover;
