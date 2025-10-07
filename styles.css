@@ -87,7 +87,7 @@ body {
 /* section 1 */
 
 .section-1{
-    background-image: url(/assets/hmebg.jpg);
+    background-image: url(./assets/hmebg.jpg);
     color: #ffffff;   
     text-align: center;
     background-size: cover;
@@ -217,7 +217,7 @@ body {
 }
 
 .section-4{
-    background-image: url(/assets/hmbg2.jpg);
+    background-image: url(./assets/hmbg2.jpg);
     background-size: cover;
     background-position: center;
     min-height: 70vh;
@@ -241,7 +241,7 @@ body {
 /* section-5 */
 .section-5 {
     position: relative;
-    background-image: url('/assets/hmebg3.jpeg');
+    background-image: url('./assets/hmebg3.jpeg');
     min-height: 70vh;
     background-size: cover;
     background-position: center;
