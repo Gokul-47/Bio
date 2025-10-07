@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly Biotech</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ===== Hero Section ===== */
+    .abt-1 {
+      background: rgba(0, 0, 0, 0.5) url('/assets/scientist.jpg') center/cover no-repeat;
+      background-blend-mode: overlay;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px 10%;
+      color: #f5f5f5;
+      text-align: left;
+    }
+
+    .abt-1 h1 {
+      font-size: 70px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .abt-1 p {
+      font-size: 20px;
+      max-width: 700px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .abt-1 a {
+      background-color: #4caf50;
+      padding: 12px 25px;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .abt-1 a:hover {
+      background-color: #357a38;
+    }
+
+    /* ===== About Section ===== */
+    .about-section {
+      padding: 80px 10%;
+      background-color: #edfff0;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin-bottom: 60px;
+    }
+
+    .about-content h1 {
+      font-size: 52px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: #002b20;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      color: #234;
+      line-height: 1.7;
+    }
+
+    /* ===== Stats Grid ===== */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .card {
+      border-radius: 10px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #1b3029;
+    }
+
+    .card span {
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .light-green { background-color: #dfffe2; color: #063d23; }
+    .dark-green { background-color: #a8e4c2; color: #021b10; }
+    .dark-blue { background-color: #032b20; color: #fff; }
+
+    .sales-data {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .sales-data h1 {
+      font-size: 60px;
+      background: linear-gradient(to right, #2a2a2a, #7575a8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+
+    .sales-data p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* ===== Feature Section ===== */
+    .feature-section {
+      background-color: #f9fdfb;
+      padding: 100px 10%;
+      color: #022b1f;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .main-heading {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      color: #022b1f;
+    }
+
+    .column-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 40px;
+    }
+
+    .column-item {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: left;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .column-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .image-container {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+
+    .column-item h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #064c37;
+    }
+
+    .column-item p {
+      font-size: 16px;
+      color: #364b42;
+      line-height: 1.6;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 22px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .learn-more:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logobiotech.png" alt="Biotech Logo">
+    </div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="#">Home ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="home1.html">Home 1</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="media.html">Media & News</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="abt-1">
+    <h1>A world-leading<br />biosolutions partner</h1>
+    <p>At Novonesis, we are leading the era of biosolutions. By leveraging the power of microbiology with science, we transform the way the world produces, consumes and lives.</p>
+    <a href="#">Why sustainable solutions</a>
+  </div>
+
+  <section class="about-section">
+    <div class="about-content">
+      <h1>By transforming industries<br />we’re changing the world</h1>
+      <p>Stacklit Biotech is divided into two divisions, supporting healthier lives and a healthier planet. We work closely with customers across multiple industries to create innovations that take their business into the future. We pride ourselves on unmatched customer understanding and relations.</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card dark-green">
+        <h3>Food & Health Biosolutions</h3>
+        <p>Enabling healthier lives</p>
+        <span>45%</span>
+      </div>
+      <div class="card light-green">
+        <h3>Food & Beverages</h3>
+        <p>33% of sales</p>
+      </div>
+      <div class="card light-green">
+        <h3>Human Health</h3>
+        <p>12% of sales</p>
+      </div>
+      <div class="card dark-blue">
+        <h3>Planetary Health Biosolutions</h3>
+        <p>Enabling a healthier planet</p>
+      </div>
+      <div class="card dark-green">
+        <h3>Household Care</h3>
+        <p>19% of sales</p>
+      </div>
+      <div class="card dark-green">
+        <h3>Agriculture, Energy & Tech</h3>
+        <p>16% of sales</p>
+      </div>
+      <div class="sales-data">
+        <h1>€3.9 bn</h1>
+        <p>Total sales 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <h1 class="main-heading">Three ways to a healthier life on a healthier planet</h1>
+
+      <div class="column-grid">
+        <div class="column-item">
+          <div class="image-container">
+            <img src="assets/food.jpg" alt="Farming field with crops">
+          </div>
+          <h2>Biosolutions for food and beverages</h2>
+          <p>By 2050, we need to feed ten billion more people. Our biosolutions make processes more sustainable and efficient, enabling great taste, texture, and appearance with simpler labels.</p>
+          <p>They also extend shelf life, improve nutritional profiles, and unlock new sustainable protein sources.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+
+        <div class="column-item">
+          <div class="image-container">
+            <img src="assets/human.jpg" alt="People relaxing in sunlight">
+          </div>
+          <h2>Biosolutions for human health</h2>
+          <p>People today want control of their health at every stage. Our clinically tested biosolutions empower lifelong wellness with probiotics, prebiotics, enzymes, and novel vitamins.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+
+        <div class="column-item">
+          <div class="image-container">
+            <img src="assets/panetry.jpg" alt="Sustainable farming landscape">
+          </div>
+          <h2>Biosolutions for planetary health</h2>
+          <p>Our biosolutions reduce energy, chemical, and water usage, helping industries minimize waste while optimizing production for a healthier planet.</p>
+          <a href="#" class="learn-more">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+```
