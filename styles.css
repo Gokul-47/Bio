@@ -241,7 +241,7 @@ body {
 /* section-5 */
 .section-5 {
     position: relative;
-    background-image: url('/assets/hmebg3.jpeg');
+    background-image: url('assets/hmebg3.jpeg');
     min-height: 70vh;
     background-size: cover;
     background-position: center;
