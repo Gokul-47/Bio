@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stackly Biotech</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
+        body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+
+body.loaded {
+  opacity: 1;
+}
         .section-1{
             background-image: url('assets/home1-sec-1.jpg');
             color: #ffffff;   
@@ -266,7 +276,6 @@
             background-color: #357a38;
             }
 
-            /* Tablets and small laptops */
 @media (max-width: 1200px) {
     .section-1 h1 {
         font-size: 70px;
@@ -420,43 +429,43 @@
     </ul>
   </nav> 
   <div class="section-1">
-    <h1>The era of<br/>Biosolutions</h1>
-    <p>It's time to overcome some of our greatest challenges with solutions rooted in biology. It’s time for the era of biosolutions.</p>
+    <h1 data-aos="fade-up">The era of<br/>Biosolutions</h1>
+    <p data-aos="fade-up">It's time to overcome some of our greatest challenges with solutions rooted in biology. It’s time for the era of biosolutions.</p>
   </div> 
   <div class="section-2">
     <div class="sec-2-lft">
-        <h1>For balanced food <br/>systems</h1>
-        <p>Biology has always been a fundamental part of creating food – and today it holds the potential to transform every step of the food value chain. Explore how biology can help create balanced, secure and resilient food systems to nourish a growing world.</p>
+        <h1 data-aos="fade-up">For balanced food <br/>systems</h1>
+        <p data-aos="fade-up">Biology has always been a fundamental part of creating food – and today it holds the potential to transform every step of the food value chain. Explore how biology can help create balanced, secure and resilient food systems to nourish a growing world.</p>
     </div>
-    <div class="sec-2-rght">
+    <div class="sec-2-rght" data-aos="fade-up">
         <img src="assets/home-1bg.jpg"/>
     </div>
   </div>
   <div class="section-3">
     <div class="sectio-3-left">
-        <h1>For a healthy planet</h1>
-        <p>We’re facing record-breaking temperatures, extreme weather events and a growing population. And our natural resources are under extreme pressure. So how can we better balance our needs with our planet’s?</p>
-        <a href="#">Find out</a>
+        <h1 data-aos="fade-up">For a healthy planet</h1>
+        <p data-aos="fade-up">We’re facing record-breaking temperatures, extreme weather events and a growing population. And our natural resources are under extreme pressure. So how can we better balance our needs with our planet’s?</p>
+        <a href="#" data-aos="fade-up">Find out</a>
     </div>
     <div class="section-3-right">
-        <h1>For healthy lives</h1>
-        <p>Across the world, changing lifestyles are impacting health. Unhealthy diets and high stress levels are key risk factors. So how can people balance modern lifestyles and healthier lives?  </p>
-        <a href="#">Find Out</a>
+        <h1 data-aos="fade-up">For healthy lives</h1>
+        <p data-aos="fade-up">Across the world, changing lifestyles are impacting health. Unhealthy diets and high stress levels are key risk factors. So how can people balance modern lifestyles and healthier lives?  </p>
+        <a href="#" data-aos="fade-up">Find Out</a>
     </div>
     
   </div>
   <div class="Sec-4">
-    <h1>A billion years of experience.<br/>
+    <h1 data-aos="fade-up">A billion years of experience.<br/>
         And counting.</h1>
-        <p>Microbes and enzymes are tiny but mighty agents of change. For billions of years, they’ve enabled transformation in all living things through microbiology.</p><br/>
-        <p>We harness that power in our biosolutions to transform consumer products and make industrial and agricultural processes more sustainable and efficient.</p>
+        <p data-aos="fade-up">Microbes and enzymes are tiny but mighty agents of change. For billions of years, they’ve enabled transformation in all living things through microbiology.</p><br/>
+        <p data-aos="fade-up">We harness that power in our biosolutions to transform consumer products and make industrial and agricultural processes more sustainable and efficient.</p>
   </div>
   <div class="sec-5">
     <div class="sec-5-head">
-    <h1>Biosolutions for sustainable growth</h1>
+    <h1 data-aos="fade-up">Biosolutions for sustainable growth</h1>
     </div>
-    <div class="sec-5-down">
-        <div class="sec-5-down-box">
+    <div class="sec-5-down" data-aos="fade-up">
+        <div class="sec-5-down-box" >
             <img src="assets/dollar-sign.png"/>
             <h5>$26 trillion through to 2030</h5>
             <p>Transitioning to low-carbon, sustainable growth could deliver global economic gains of $26 trillion through to 2030.</p>
@@ -475,7 +484,7 @@
     </div>
   </div>
     <div class="sec-6">
-        <div class="sec-6-left">
+        <div class="sec-6-left" data-aos="fade-up">
         <h1>All you need to know about<br /> biosolutions, delivered<br/> monthly</h1>
         <p>Biosolutions are fascinating but can be difficult to grasp. That's why we created the monthly Biosolutions Bulletin — to break down the science into easy-to-understand, engaging stories with beautiful hand-drawn illustrations.</p>
         <br/>
@@ -483,7 +492,7 @@
         <br/>
         <p>Sign up today to stay updated!</p>
     </div>
-    <div class="sec-6-right">
+    <div class="sec-6-right" data-aos="fade-up">
         <h1>One more step…</h1>
         <p>To complete the get in touch form or sign up, please click on the button below to enable cookies.</p>
         <a href="contact.html">Contact Us</a>
@@ -527,5 +536,8 @@
   </div>
     </footer>
   
+
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

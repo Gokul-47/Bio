@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stackly Biotech</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    /* === Hero Section === */
+
+      body {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+
+body.loaded {
+  opacity: 1;
+}
+
+
     .abt-1 {
       background: rgba(0, 0, 0, 0.5) url('assets/scientist.jpg') center/cover no-repeat;
       background-blend-mode: overlay;
@@ -48,7 +60,7 @@
       background-color: #357a38;
     }
 
-    /* === About Section === */
+  
     .about-section {
       padding: 80px 10%;
       background-color: #edfff0;
@@ -73,7 +85,7 @@
       line-height: 1.7;
     }
 
-    /* === Stats Grid === */
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -132,7 +144,7 @@
       font-size: 16px;
     }
 
-    /* === Feature Section === */
+
     .feature-section {
       background-color: #f9fdfb;
       padding: 100px 10%;
@@ -165,6 +177,11 @@
       text-align: left;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
     .column-item:hover {
@@ -202,10 +219,10 @@
       color: #364b42;
       line-height: 1.6;
     }
+   
 
     .learn-more {
-      display: inline-block;
-      margin-top: 10px;
+      display:inline-block;
       padding: 10px 22px;
       background-color: #4caf50;
       color: #fff;
@@ -213,19 +230,169 @@
       font-weight: 600;
       border-radius: 6px;
       transition: all 0.3s ease;
-      align-self: center;
-      
+    }
+
+    .learn-btn{
+      text-align: center;
     }
 
     .learn-more:hover {
       background-color: #388e3c;
     }
+
+    .abt-4{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding: 48px 24px;
+        box-sizing: border-box;
+      }
+
+
+      .abt-4 .abt-lft{
+        flex: 1 55%;
+        min-width: 280px;
+      }
+
+
+      .abt-4 .abt-rght{
+        flex: 1 45%;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .abt-4 .abt-rght img{
+        width: 80%;
+        height: 60%;
+        max-height: 520px;        
+        display: block;
+        object-fit: cover;        
+        box-shadow: 0 8px 24px rgba(12,20,30,0.12);
+        border: 1px solid rgba(0,0,0,0.04);
+        border-radius: 5px;
+      }
+
+
+      .abt-4 .abt-lft h1{
+        margin: 0 0 16px 0;
+        font-weight: 700;
+        color: #123;
+        font-size: clamp(1.6rem, 2.6vw, 2.4rem); 
+        letter-spacing: -0.02em;
+      }
+
+      .abt-4 .abt-lft p{
+        margin: 0;
+        color: #556;
+        font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+        line-height: 1.7;
+        max-width: 70ch;
+      }
+
+      .abt-5{
+        max-width: 1200px;
+        margin:0 auto;
+        padding: 60px 40px;
+      }
+      .abt-5 h1{
+         max-width: 800px;
+        font-weight: 700;
+        color: #123;
+        font-size: clamp(1.6rem, 2.6vw, 2.4rem); 
+        letter-spacing: -0.02em;
+      }
+      .abt-5 p,h5{
+        max-width: 800px;
+        line-height: 1.8;
+        color:#556;
+        margin: 0;
+        font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+      }
+      .abt-6{
+        text-align: center;
+        padding: 80px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+      }
+      .abt-6 h1{
+        font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #0f6b4b;
+        letter-spacing: 0.5px;
+      }
+      .abt-6 img {
+        width: 100%;
+        max-width: 1200px;
+        height: auto;
+        object-fit: cover;
+      }
+      .sec-6 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 80px 100px;
+            background-color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            color: #021936;
+            }
+
+            .sec-6-left,
+            .sec-6-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 0;
+            }
+            
+
+            .sec-6-left h1,
+            .sec-6-right h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            line-height: 1.3;
+            }
+
+            .sec-6-left p,
+            .sec-6-right p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            }
+
+            .sec-6-right a {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            }
+
+            .sec-6-right a:hover {
+            background-color: #357a38;
+            }
+
+   
   </style>
 </head>
 
 <body>
 
-  <!-- Navbar -->
+
   <nav class="navbar">
     <div class="logo">
       <img src="assets/logobiotech.png" alt="Stackly Biotech Logo">
@@ -245,21 +412,21 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+
   <div class="abt-1">
-    <h1>A world-leading<br />biosolutions partner</h1>
-    <p>At Stackly Biotech, we are leading the era of biosolutions. By leveraging the power of microbiology with science, we transform the way the world produces, consumes and lives.</p>
-    <a href="#">Why sustainable solutions</a>
+    <h1 data-aos="fade-up">A world-leading<br />biosolutions partner</h1>
+    <p data-aos="fade-up">At Stackly Biotech, we are leading the era of biosolutions. By leveraging the power of microbiology with science, we transform the way the world produces, consumes and lives.</p>
+    <a href="#" data-aos="fade-up">Why sustainable solutions</a>
   </div>
 
-  <!-- About Section -->
+
   <section class="about-section">
-    <div class="about-content">
+    <div class="about-content" data-aos="fade-up">
       <h1>By transforming industries<br />we’re changing the world</h1>
       <p>Stackly Biotech is divided into two divisions, supporting healthier lives and a healthier planet. We work closely with customers across multiple industries to create innovations that take their business into the future. We pride ourselves on unmatched customer understanding and relations.</p>
     </div>
 
-    <div class="stats-grid">
+    <div class="stats-grid" data-aos="fade-up">
       <div class="card dark-green">
         <h3>Food & Health Biosolutions</h3>
         <p>Enabling healthier lives</p>
@@ -292,42 +459,129 @@
     </div>
   </section>
 
-  <!-- Feature Section -->
+ 
   <section class="feature-section">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <h1 class="main-heading">Three ways to a healthier life on a healthier planet</h1>
 
       <div class="column-grid">
         <div class="column-item">
+          <div>
           <div class="image-container">
             <img src="assets/food.jpg" alt="Food and Beverages">
           </div>
           <h2>Biosolutions for food and beverages</h2>
           <p>By 2050, we need to feed ten billion more people. Our biosolutions make processes more sustainable and efficient, enabling great taste, texture, and appearance with simpler labels.</p>
           <p>They also extend shelf life, improve nutritional profiles, and unlock new sustainable protein sources.</p>
-          <a href="#" class="learn-more">Learn more</a>
-        </div>
+          </div>
+          <div class="learn-btn">          
+            <a href="#" class="learn-more">Learn more</a>
+          </div>
+          </div>
 
         <div class="column-item">
+          <div>
           <div class="image-container">
             <img src="assets/human.jpg" alt="Human Health Solutions">
           </div>
           <h2>Biosolutions for human health</h2>
           <p>People today want control of their health at every stage. Our clinically tested biosolutions empower lifelong wellness with probiotics, prebiotics, enzymes, and novel vitamins.</p>
+          </div>
+          <div class="learn-btn">
           <a href="#" class="learn-more">Learn more</a>
+          </div>
         </div>
 
         <div class="column-item">
+          <div>
           <div class="image-container">
             <img src="assets/panetry.jpg" alt="Planetary Health Solutions">
           </div>
           <h2>Biosolutions for planetary health</h2>
           <p>Our biosolutions reduce energy, chemical, and water usage, helping industries minimize waste while optimizing production for a healthier planet.</p>
+          </div>
+          <div class="learn-btn">
           <a href="#" class="learn-more">Learn more</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="abt-4" data-aos="fade-up">
+    <div class="abt-lft" data-aos="slide-right">
+      <h1>We’re here to better our world with biology</h1>
+      <p>Think about it: What if the answers to many of our challenges have been right in front of us all along? For billions of years, living organisms and ecosystems have developed genius, circular solutions. Thanks to progress in biology we are now able to understand and apply these genius solutions to the challenges we all face. Solutions rooted in biology can help solve humanity’s biggest challenges. For more than a century this has been our guide, our purpose. It got us here. And it’s how we'll impact the future. More than ever the world needs change. With biosolutions, the possibilities for transformation are endless.</p>
+    </div>
+    <div class="abt-rght" data-aos="slide-left">
+      <img src="assets/hmbg2.jpg"/>
+    </div>
+  </div>
+
+  <div class="abt-5" data-aos="fade-up">
+    <h1>Our story</h1>
+    <h5>In 2024, Chr. Hansen and Novozymes joined forces to form Novonesis.​</h5>
+    <p>We are 10,000 people worldwide whose expertise spans more than 30 different industries. All around the world our biosolutions already create value for thousands of customers and benefit the planet. Our biosolutions enable feeding and fueling the world more sustainably, from healthy and sustainable nutrition to biofuel. Our biosolutions also reduce the use of fossil-based resources, chemicals, energy and water. And this is just the beginning.</p>
+  </div>
+
+  <div class="abt-6" data-aos="fade-up">
+    <h1>Clients around the world</h1>
+    <img src="assets/map.png"/>
+  </div>
+  <div class="sec-6" data-aos="fade-up">
+        <div class="sec-6-left">
+        <h1>All you need to know about<br /> biosolutions, delivered<br/> monthly</h1>
+        <p>Biosolutions are fascinating but can be difficult to grasp. That's why we created the monthly Biosolutions Bulletin — to break down the science into easy-to-understand, engaging stories with beautiful hand-drawn illustrations.</p>
+        <br/>
+        <p>Each issue dives deep into the science behind biosolutions and their roles in transforming everything from agriculture to industries and the products we use every day.</p>
+        <br/>
+        <p>Sign up today to stay updated!</p>
+    </div>
+    <div class="sec-6-right">
+        <h1>One more step…</h1>
+        <p>To complete the get in touch form or sign up, please click on the button below to enable cookies.</p>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    </div>
+
+   <footer class="footer">
+    <div class="footer-container">
+      <!-- Company Info -->
+      <div class="footer-section">
+        <h3>Stackly Biotech</h3>
+        <p>Innovating with biology to improve the world. Follow us for updates, news, and the latest breakthroughs in biosolutions.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stackly Biotech. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
