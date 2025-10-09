@@ -27,28 +27,134 @@
         font-size: clamp(0.98rem, 1.2vw, 1.05rem);
       }
       
-      .service-2{
-        text-align: center;
-      }
-      .learn-more {
-      display:inline-block;
-      padding: 5px 12px;
-      background-color: #4caf50;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 20px; 
+     .service-2 {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+}
+
+/* ===== Grid Layout ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #fff;
+  color: #556;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 30px 25px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Card Top Section ===== */
+.card-up {
+  text-align: center;
+}
+
+.card-up img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 100px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-up img {
+  transform: scale(1.08);
+}
+
+.card-up h5 {
+  color: #021936;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.card-up p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ===== Learn More Button ===== */
+.learn-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.service-3{
         max-width: 1200px;
         margin: 0 auto;
-        padding: 20px;
-    }
-    
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 48px 24px;
+        box-sizing: border-box;
+      }
+
+
+      .ser-lft{
+        flex: 1 65%;
+        min-width: 280px;
+      }
+
+
+      .ser-rght{
+        flex: 1 35%;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .ser-right img{
+        width: 80%;
+        height: 60%;
+        max-height: 520px;        
+        display: block;
+        object-fit: cover;        
+        box-shadow: 0 8px 24px rgba(12,20,30,0.12);
+        border: 1px solid rgba(0,0,0,0.04);
+        border-radius: 5px;
+      }
+
+
+     
+       .ser-lft p{
+        margin: 0;
+        color: #556;
+        font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+        line-height: 1.7;
+        max-width: 70ch;
+      }
     </style>
 </head>
 <body>
@@ -80,7 +186,7 @@
     <div class="grid">
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/animal.avif"/>
             <h5>Animal</h5>
             <p>Our unique science-based probiotics, microbes and enzymes work in synergy with your strategies to drive consistent results.</p>
             </div>
@@ -90,7 +196,7 @@
         </div>
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/beverages.avif"/>
             <h5>Beverages</h5>
             <p>From non-alcoholic to high-gravity beers, budget to premium wines, and fresh to fermented juices, enzymes and cultures empower you to innovate your process and products.</p>
             </div>
@@ -100,7 +206,7 @@
         </div>
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/biodiesel.avif"/>
             <h5>Biodiesel</h5>
             <p>Enzymatic biodiesel processing delivers more feedstock flexibility and optimized operating cost.</p>
             </div>
@@ -110,7 +216,7 @@
         </div>
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/biomass.avif"/>
             <h5>Biogas</h5>
             <p>Our extensive biogas portfolio allows you to boost your plant’s profitability with our tailormade solutions, whether your plant processes residues from agriculture, food production, wastewater or sewage.</p>
             </div>
@@ -120,7 +226,7 @@
         </div>
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/plant.avif"/>
             <h5>Plant</h5>
             <p>Our naturally occurring microbes and enzymes help farmers improve plant health and increase crop yield.</p>
             </div>
@@ -130,7 +236,7 @@
         </div>
         <div class="card">
             <div class="card-up">
-            <img src=""/>
+            <img src="assets/renewableenergy.avif"/>
             <h5>Renewable diesel</h5>
             <p>Meet HVO/HEFA specifications while reducing bleaching clay dosage and oil loss.</p>
             </div>
@@ -140,6 +246,17 @@
         </div>
     </div>
 
+  </div>
+
+  <div class="service-3" data-aos="fade-up">
+    <div class="ser-lft" data-aos="slide-right">
+      <h1>There’s a biosolution for
+(almost) everything</h1>
+      <p>Higher crop yields from healthier soil and better animal welfare. Delicious food that stays fresher for longer. Cleaner, softer laundry. Lower emissions and less pollution. Better mental and physical health from birth to old age. These are just some of the many ways our biosolutions transform lives every day.</p>
+    </div>
+    <div class="ser-right" data-aos="slide-left">
+      <img src="assets/biosolution.jpeg"/>
+    </div>
   </div>
 
 

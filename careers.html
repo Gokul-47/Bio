@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Biotech</title>
+    <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    .career-1{
+            background-image: url(assets/career.jpg);
+            background-color: rgba(0 ,0 ,0 ,0.5);
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 200px 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            color: white;
+            gap: 20px;
+        }
+        .career-1 h1{
+            margin: 0;
+            font-size: 80px;
+        }
+        .career-1 p{
+            margin: 0;
+            max-width: 700px;
+            font-size: 30px;
+        }
+
+        .career-2{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        padding: 48px 24px;
+        box-sizing: border-box;
+      }
+
+
+      .car-lft{
+        flex: 1 65%;
+        min-width: 280px;
+        gap: 10px;
+      }
+
+
+      .car-rght{
+        flex: 1 35%;
+        min-width: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+      .car-right img{
+        width: 80%;
+        height: 60%;
+        max-height: 520px;        
+        display: block;
+        object-fit: cover;        
+        box-shadow: 0 8px 24px rgba(12,20,30,0.12);
+        border: 1px solid rgba(0,0,0,0.04);
+        border-radius: 5px;
+      }
+
+
+    
+       .car-lft p{
+        margin: 0;
+        color: #556;
+        font-size: clamp(0.98rem, 1.2vw, 1.05rem);
+        line-height: 1.7;
+        max-width: 70ch;
+        
+      }
+
+      .career-3 {
+  background-color: #1f2b3a; /* dark navy blue background */
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.career-3 h2 {
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+  color: #cfd8f3;
+}
+
+.career-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.career-card {
+  background-color: #e8ebf7; /* light bluish white */
+  color: #1f2b3a;
+  border-radius: 12px;
+  padding: 40px 20px;
+  width: 280px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.career-card img {
+  width: 70px;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.career-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.career-card p {
+  font-size: 1rem;
+  color: #3a475a;
+}
+
+
+.culture-section {
+  background-color: #1f2b3a; /* dark blue background */
+  color: #ffffff;
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.culture-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.culture-section .content {
+  flex: 1 1 500px;
+}
+
+.culture-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cfd8f3;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.culture-section p {
+  font-size: 1.1rem;
+  color: #d4d8e8;
+  line-height: 1.7;
+}
+
+.culture-rght {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.culture-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.culture-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.culture-img img:hover {
+  transform: scale(1.05);
+}
+
+.job-openings-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.job-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.job-container h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+
+/* Job Listings */
+.job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.job-details h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.job-meta svg {
+    stroke: #007bff;
+}
+
+/* Job Card Toggle */
+.job-card-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.job-card-toggle:hover {
+    transform: scale(1.1);
+}
+
+.job-card-toggle svg {
+    stroke: #555;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logobiotech.png" alt="Biotech Logo" />
+    </div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="home1.html">Home 1</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="media.html">Media & News</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="career-1">
+    <h1 data-aos="fade-up">
+Choose a career <br/>that matters</h1>
+<p data-aos="fade-up">The biological choice</p>
+  </div>
+
+  <div class="career-2" data-aos="fade-up">
+    <div class="car-lft" data-aos="slide-right">
+     
+      <p>We’re here to better our world with biology and we need your help. Novonesis is the world’s leading biosolutions partner and we’re looking for change-makers within all fields and from all backgrounds. Future colleagues that want to join a workplace filled with respect, challenge, and a commitment to doing what matters for each other and the planet.
+        </p>
+        <p>We are the biological choice.</p>
+    
+    </div>
+    <div class="car-right" data-aos="slide-left">
+      <img src="assets/career-1.jpeg"/>
+    </div>
+  </div>
+
+  <section class="career-3">
+  <h2 >Stackly by the numbers</h2>
+  <div class="career-cards">
+    <div class="career-card">
+      <img src="people-icon.png" alt="Employees icon">
+      <h3>10,000+</h3>
+      <p>Employees</p>
+    </div>
+
+    <div class="career-card">
+      <img src="gear-icon.png" alt="Industries icon">
+      <h3>30+</h3>
+      <p>Commercial industries</p>
+    </div>
+
+    <div class="career-card">
+      <img src="globe-icon.png" alt="Countries icon">
+      <h3>40+</h3>
+      <p>Countries</p>
+    </div>
+  </div>
+</section>
+
+<section class="culture-section">
+    <div class="container">
+        <div class="content">
+            <h1>Explore our culture and philosophy</h1>
+            <p>Take a closer look at the values and philosophies that make us who we are.</p>
+       
+        </div>
+        <div class="culture-rght">
+            <div class="culture-img">
+                <img src="assets/cultureimge.webp"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="job-openings-section">
+    <div class="job-container">
+        <h1>Open positions</h1>
+
+       
+
+     
+
+        <div class="job-listings">
+            <div class="job-card">
+                <div class="job-details">
+                    <h3>Support Specialist</h3>
+                    <div class="job-meta">
+                        <span class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Bangalore - India
+                        </span>
+                        <span class="type">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Full-time
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="job-card">
+                <div class="job-details">
+                    <h3>Senior Laborant, Applikationsforskning, Animal Biosolutions AR</h3>
+                    <div class="job-meta">
+                        <span class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Lyngby - Denmark
+                        </span>
+                        <span class="type">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Full-time
+                        </span>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="job-card">
+                <div class="job-details">
+                    <h3>Sanitation Technician - 2nd Shift</h3>
+                    <div class="job-meta">
+                        <span class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Wausau - United States of America
+                        </span>
+                        <span class="type">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Full-time
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="job-card">
+                <div class="job-details">
+                    <h3>Project Specialist in Granulation, CAPEX & Technology</h3>
+                    <div class="job-meta">
+                        <span class="location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Kalundborg - Denmark
+                        </span>
+                        <span class="type">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Full-time
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="section-6">
+    <div class="sec-6-left" data-aos="fade-up">
+      <h1>All you need to know about<br />biosolutions, delivered monthly</h1>
+      <p>Biosolutions are fascinating but can be difficult to grasp. That's why we created the monthly Biosolutions Bulletin — to break down the science into easy-to-understand, engaging stories with beautiful hand-drawn illustrations.</p>
+      <p>Each issue dives deep into the science behind biosolutions and their roles in transforming everything from agriculture to industries and the products we use every day.</p>
+      <p>Sign up today to stay updated!</p>
+    </div>
+    <div class="sec-6-right" data-aos="fade-up">
+      <h1>One more step…</h1>
+      <p>To complete the get-in-touch form or sign up, please click on the button below to enable cookies.</p>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-container">
+ 
+      <div class="footer-section">
+        <h3>Stackly Biotech</h3>
+        <p>Innovating with biology to improve the world. Follow us for updates, news, and the latest breakthroughs in biosolutions.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+   
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons" >
+          <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Stackly Biotech. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
