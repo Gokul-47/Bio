@@ -386,6 +386,206 @@ body.loaded {
             background-color: #357a38;
             }
 
+            /* ===== About Page — Responsive Media Queries ===== */
+
+/* Up to 1200px (small desktops / large tablets) */
+@media (max-width: 1200px) {
+  .abt-1 h1 {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+  .abt-1 p {
+    font-size: 18px;
+  }
+  .about-content h1 {
+    font-size: 42px;
+  }
+  .abt-4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .abt-4 .abt-rght {
+    margin-top: 30px;
+  }
+  .abt-4 .abt-rght img {
+    width: 100%;
+    height: auto;
+  }
+  .sec-6 {
+    padding: 60px 5%;
+    gap: 30px;
+  }
+  .sec-6-left h1,
+  .sec-6-right h1 {
+    font-size: 2rem;
+  }
+
+}
+
+/* Up to 900px (tablets) */
+@media (max-width: 900px) {
+  .abt-1 {
+    padding: 50px 8%;
+  }
+  .abt-1 h1 {
+    font-size: 48px;
+  }
+  .abt-1 p {
+    font-size: 16px;
+  }
+  .abt-1 a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .about-content h1 {
+    font-size: 32px;
+  }
+  .about-content p {
+    font-size: 15px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .card span {
+    font-size: 32px;
+  }
+  .sec-6-left h1,
+  .sec-6-right h1 {
+    font-size: 1.8rem;
+  }
+  .sec-6-left p,
+  .sec-6-right p {
+    font-size: 0.95rem;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* Hide by default */
+    width: 100%;
+    background-color: #EDFFF0;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+/* Up to 600px (portrait phones) */
+@media (max-width: 600px) {
+  .abt-1 {
+    padding: 40px 5%;
+  }
+  .abt-1 h1 {
+    font-size: 32px;
+  }
+  .abt-1 p {
+    font-size: 14px;
+  }
+  .abt-1 a {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+  .about-content h1 {
+    font-size: 26px;
+  }
+  .about-content p {
+    font-size: 14px;
+  }
+  .abt-4 .abt-lft h1 {
+    font-size: 1.6rem;
+  }
+  .abt-4 .abt-lft p {
+    font-size: 0.9rem;
+  }
+  .abt-4 .abt-rght {
+    margin-top: 20px;
+  }
+  .abt-4 .abt-rght img {
+    width: 80%;
+  }
+  .sec-6 {
+    padding: 40px 10px;
+    gap: 25px;
+  }
+  .sec-6-left h1,
+  .sec-6-right h1 {
+    font-size: 1.5rem;
+  }
+  .sec-6-left p,
+  .sec-6-right p {
+    font-size: 0.85rem;
+  }
+  .sec-6-right a {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Up to 375px (small phones) */
+@media (max-width: 375px) {
+  .abt-1 h1 {
+    font-size: 28px;
+  }
+  .abt-1 p {
+    font-size: 13px;
+  }
+  .abt-1 a {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+  .about-content h1 {
+    font-size: 22px;
+  }
+  .about-content p {
+    font-size: 12px;
+  }
+  .card span {
+    font-size: 28px;
+  }
+  .sec-6-left h1,
+  .sec-6-right h1 {
+    font-size: 1.3rem;
+  }
+  .sec-6-left p,
+  .sec-6-right p {
+    font-size: 0.8rem;
+  }
+  .sec-6-right a {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+            
+
    
   </style>
 </head>
@@ -395,11 +595,18 @@ body.loaded {
 
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logobiotech.png" alt="Stackly Biotech Logo">
+      <a href="index.html"><img src="assets/logobiotech.png" alt="Biotech Logo" /></a>
     </div>
-    <ul class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
       <li class="dropdown">
-        <a href="#">Home ▼</a>
+        <a href="index.html">Home ▼</a>
         <ul class="dropdown-menu">
           <li><a href="home1.html">Home 1</a></li>
         </ul>
@@ -416,7 +623,7 @@ body.loaded {
   <div class="abt-1">
     <h1 data-aos="fade-up">A world-leading<br />biosolutions partner</h1>
     <p data-aos="fade-up">At Stackly Biotech, we are leading the era of biosolutions. By leveraging the power of microbiology with science, we transform the way the world produces, consumes and lives.</p>
-    <a href="#" data-aos="fade-up">Why sustainable solutions</a>
+    <a href="404page.html" data-aos="fade-up">Why sustainable solutions</a>
   </div>
 
 
@@ -514,7 +721,7 @@ body.loaded {
       <p>Think about it: What if the answers to many of our challenges have been right in front of us all along? For billions of years, living organisms and ecosystems have developed genius, circular solutions. Thanks to progress in biology we are now able to understand and apply these genius solutions to the challenges we all face. Solutions rooted in biology can help solve humanity’s biggest challenges. For more than a century this has been our guide, our purpose. It got us here. And it’s how we'll impact the future. More than ever the world needs change. With biosolutions, the possibilities for transformation are endless.</p>
     </div>
     <div class="abt-rght" data-aos="slide-left">
-      <img src="assets/hmbg2.jpg"/>
+      <img src="assets/hmbg2.jpg" alt="background-image"/>
     </div>
   </div>
 
@@ -526,7 +733,7 @@ body.loaded {
 
   <div class="abt-6" data-aos="fade-up">
     <h1>Clients around the world</h1>
-    <img src="assets/map.png"/>
+    <img src="assets/map.png" alt="map-img"/>
   </div>
   <div class="sec-6" data-aos="fade-up">
         <div class="sec-6-left">
@@ -568,10 +775,10 @@ body.loaded {
       <div class="footer-section">
         <h4>Follow Us</h4>
         <div class="social-icons">
-          <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
-          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
-          <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+          <a href="404page.html"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="404page.html"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="404page.html"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+          <a href="404page.html"><img src="assets/instagram.png" alt="Instagram" /></a>
         </div>
       </div>
     </div>

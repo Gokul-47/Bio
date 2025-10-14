@@ -26,7 +26,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -269,7 +269,7 @@ body {
 .section-5 p {
   margin: 0 auto;
   font-size: 20px;
-  max-width: 400px;
+  max-width: 1000px;
   line-height: 1.8;
 }
 
@@ -413,8 +413,46 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 15px;
   font-size: 0.9rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+}
+.betterworld {
+  font-size: 90px;
+  line-height: 100px;
+  color: #f5f5f5;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 100px;
+  padding-top: 120px;
+  
 }
 
+.h1-size {
+      font-size: 90px;
+      line-height: 100px;
+    }
+
+    .h2-size {
+      font-size: 60px;
+      line-height: 1.2;
+    }
+
+    .h3-size {
+      font-size: 40px;
+    }
+
+    .h4-size {
+      font-size: 30px;
+    }
+
+    .h5-size {
+      font-size: 22px;
+    }
+
+    .h6-size {
+      font-size: 18px;
+    }
 /* ========== MEDIA QUERIES ========== */
 
 /* Tablets and small laptops (1024px and below) */

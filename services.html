@@ -155,16 +155,216 @@
         line-height: 1.7;
         max-width: 70ch;
       }
+
+      /* === Responsive Styling for 900px and below === */
+
+
+      @media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-1, .service-2, .service-3 {
+    padding: 40px 20px;
+  }
+
+  .service-3 {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ser-right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-6 {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .sec-6-left,
+  .sec-6-right {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== Mobile view (768px and below) ===== */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-1 h1,
+  .service-2 h1,
+  .service-3 h1,
+  .section-6 h1 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .learn-more {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background-color: white;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  .ser-lft,
+  .ser-rght {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ser-lft p {
+    max-width: 100%;
+  }
+
+  .ser-right img {
+    width: 90%;
+    max-height: 300px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Extra Small Devices (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .service-1 h1,
+  .service-3 h1,
+  .section-6 h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-up img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .ser-right img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-6 p {
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Handle long text in input fields and textareas */
+input[type="text"],
+input[type="email"],
+textarea {
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Prevent overflowing in form and cards */
+.form-group input,
+.form-group textarea,
+.card p,
+.card h5 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* Optional: truncate very long single-line content (e.g., in nav or footer) */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Set max widths to prevent container overflow */
+input,
+textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make sure layout containers adapt */
+.contact-form,
+.contact-info,
+.card,
+.ser-lft,
+.ser-rght {
+  min-width: 0;
+}
+
+
     </style>
 </head>
 <body>
-    <nav class="navbar">
+   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logobiotech.png" alt="Biotech Logo" />
+      <a href="index.html"><img src="assets/logobiotech.png" alt="Biotech Logo" /></a>
     </div>
-    <ul class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
       <li class="dropdown">
-        <a href="#">Home ▼</a>
+        <a href="index.html">Home ▼</a>
         <ul class="dropdown-menu">
           <li><a href="home1.html">Home 1</a></li>
         </ul>
@@ -176,6 +376,7 @@
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
+
   <div class="service-1" data-aos="fade-up">
     <h1>Transformative biosolutions for your business and the world</h1>
     <p>With true collaboration and unparalleled technology we can help transform your business through biology. Benefit from 100+ years of innovation and experience in biosolutions and the top talent in the field. We have deep expertise in 30+ industries so we know your industry. And we have the biotech toolkit and versatility to deliver the exact solutions you need – fast.</p>
@@ -186,62 +387,62 @@
     <div class="grid">
         <div class="card">
             <div class="card-up">
-            <img src="assets/animal.avif"/>
+            <img src="assets/animal.avif" alt="animals"/>
             <h5>Animal</h5>
             <p>Our unique science-based probiotics, microbes and enzymes work in synergy with your strategies to drive consistent results.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <div class="card">
             <div class="card-up">
-            <img src="assets/beverages.avif"/>
+            <img src="assets/beverages.avif" alt="beverages"/>
             <h5>Beverages</h5>
             <p>From non-alcoholic to high-gravity beers, budget to premium wines, and fresh to fermented juices, enzymes and cultures empower you to innovate your process and products.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <div class="card">
             <div class="card-up">
-            <img src="assets/biodiesel.avif"/>
+            <img src="assets/biodiesel.avif" alt="biodiesel"/>
             <h5>Biodiesel</h5>
             <p>Enzymatic biodiesel processing delivers more feedstock flexibility and optimized operating cost.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <div class="card">
             <div class="card-up">
-            <img src="assets/biomass.avif"/>
+            <img src="assets/biomass.avif" alt="biomass"/>
             <h5>Biogas</h5>
             <p>Our extensive biogas portfolio allows you to boost your plant’s profitability with our tailormade solutions, whether your plant processes residues from agriculture, food production, wastewater or sewage.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <div class="card">
             <div class="card-up">
-            <img src="assets/plant.avif"/>
+            <img src="assets/plant.avif" alt="plant"/>
             <h5>Plant</h5>
             <p>Our naturally occurring microbes and enzymes help farmers improve plant health and increase crop yield.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <div class="card">
             <div class="card-up">
-            <img src="assets/renewableenergy.avif"/>
+            <img src="assets/renewableenergy.avif" alt="renewable-energy"/>
             <h5>Renewable diesel</h5>
             <p>Meet HVO/HEFA specifications while reducing bleaching clay dosage and oil loss.</p>
             </div>
             <div class="card-down">
-            <a href="#" class="learn-more">Learn More</a>
+            <a href="404page.html" class="learn-more">Learn More</a>
             </div>
         </div>
     </div>
@@ -255,18 +456,10 @@
       <p>Higher crop yields from healthier soil and better animal welfare. Delicious food that stays fresher for longer. Cleaner, softer laundry. Lower emissions and less pollution. Better mental and physical health from birth to old age. These are just some of the many ways our biosolutions transform lives every day.</p>
     </div>
     <div class="ser-right" data-aos="slide-left">
-      <img src="assets/biosolution.jpeg"/>
+      <img src="assets/biosolution.jpeg" alt="biosolution"/>
     </div>
   </div>
 
-
-
-
-
-
-
-
-    
     <div class="section-6">
     <div class="sec-6-left" data-aos="fade-up">
       <h1>All you need to know about<br />biosolutions, delivered monthly</h1>
@@ -304,16 +497,17 @@
       <div class="footer-section">
         <h4>Follow Us</h4>
         <div class="social-icons" >
-          <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
-          <a href="#"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
-          <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+          <a href="404page.html"><img src="assets/facebook.png" alt="Facebook" /></a>
+          <a href="404page.html"><img src="assets/twitter.png" alt="Twitter" /></a>
+          <a href="404page.html"><img src="assets/linkedin.png" alt="LinkedIn" /></a>
+          <a href="404page.html"><img src="assets/instagram.png" alt="Instagram" /></a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; 2025 Stackly Biotech. All Rights Reserved.</p>
+      <p>Contact us: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a> | Phone: (123) 456-7890</p>
     </div>
   </footer>
 

@@ -121,6 +121,136 @@ input:focus, textarea:focus {
   background-color: #388e3c;
 }
 
+/* ===== Responsive Design - Media Queries ===== */
+
+/* Medium devices (Tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding: 60px 50px;
+    gap: 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 36px;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+}
+
+/* Small devices (Mobiles, less than 768px) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .contact-hero {
+    padding: 60px 20px;
+    height: auto;
+  }
+
+  .contact-hero h1 {
+    font-size: 28px;
+  }
+
+  .contact-hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+
+  .logo img {
+    max-width: 130px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  .contact-info{
+    padding: 0;
+  }
+  .contact-form{
+    padding: 0;
+  }
+  .form-group input{
+    padding: 0;
+  }
+  #message{
+    padding: 0;
+  }
+  .footer-section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+/* Extra small devices (below 480px) */
+@media (max-width: 480px) {
+  .contact-hero h1 {
+    font-size: 24px;
+  }
+
+  .contact-hero p {
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
 
 
 
@@ -128,25 +258,31 @@ input:focus, textarea:focus {
     </style>
 </head>
 <body>
-    <nav class="navbar">
+   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logobiotech.png" alt="Biotech Logo">
+      <a href="index.html"><img src="assets/logobiotech.png" alt="Biotech Logo" /></a>
     </div>
-    <ul class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="nav-links">
       <li class="dropdown">
-        <a href="#">Home ▼</a>
+        <a href="index.html">Home ▼</a>
         <ul class="dropdown-menu">
           <li><a href="home1.html">Home 1</a></li>
-          
         </ul>
       </li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="careers.html">Careers</a></li>
-      <li><a href="media.html">Media&News</a></li>
+      <li><a href="media.html">Media & News</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
-  </nav> 
+  </nav>
 
    <!-- ===== Contact Hero Section ===== -->
   <section class="contact-hero" >
@@ -166,32 +302,37 @@ input:focus, textarea:focus {
         <li><strong>⏰ Working Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</li>
       </ul>
       <div class="social-icons">
-        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a href="404page.html"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a href="404page.html"><img src="assets/twitter.png" alt="Twitter"></a>
+        <a href="404page.html"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        <a href="404page.html"><img src="assets/instagram.png" alt="Instagram"></a>
       </div>
     </div>
 
     <div class="contact-form" data-aos="fade-left">
-      <h2>Send Us a Message</h2>
-      <form id="contactForm">
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" name="subject" placeholder="Subject" />
-        </div>
-        <div class="form-group">
-          <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
-      <p id="formResponse"></p>
+  <h2>Send Us a Message</h2>
+  <form id="contactForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
     </div>
+    <div class="form-group">
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+    </div>
+    <div class="form-group">
+      <input type="text" id="phone" name="phone" placeholder="Phone Number" required />
+    </div>
+    <div class="form-group">
+      <input type="text" id="subject" name="subject" placeholder="Subject" required />
+    </div>
+    <div class="form-group">
+      <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+  <p id="formResponse"></p>
+</div>
+
+
   </section>
 
 
@@ -225,10 +366,10 @@ input:focus, textarea:focus {
     <div class="footer-section">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="assets/linkedin.png" alt="LinkedIn"></a>
-        <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+        <a href="404page.html"><img src="assets/facebook.png" alt="Facebook"></a>
+        <a href="404page.html"><img src="assets/twitter.png" alt="Twitter"></a>
+        <a href="404page.html"><img src="assets/linkedin.png" alt="LinkedIn"></a>
+        <a href="404page.html"><img src="assets/instagram.png" alt="Instagram"></a>
       </div>
     </div>
   </div>
