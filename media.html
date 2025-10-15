@@ -450,14 +450,19 @@
 @media (min-width: 769px) and (max-width: 991px) {
   /* Navbar */
   .nav-links {
-    display: flex !important;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    box-shadow: none;
-    background: none;
-    padding: 0;
+    flex-direction: column;
+    gap: 10px;
+    display: none; /* Hide by default */
+    width: 100%;
+    background-color: #EDFFF0;
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
   }
+
   .hamburger {
     display: none;
   }
