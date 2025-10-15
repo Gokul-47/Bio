@@ -175,16 +175,18 @@ input:focus, textarea:focus {
     width: 100%;
   }
 
-  .nav-links {
-    display: none;
+   .nav-links {
     flex-direction: column;
-    background-color: white;
+    gap: 10px;
+    display: none; /* Hide by default */
+    width: 100%;
+    background-color: #EDFFF0;
+    padding: 20px;
     position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
   }
 
   .nav-links.active {
@@ -230,6 +232,7 @@ input:focus, textarea:focus {
     text-align: center;
   }
 }
+
 
 /* Extra small devices (below 480px) */
 @media (max-width: 480px) {

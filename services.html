@@ -220,10 +220,6 @@
 
   
 
-  earn-more {
-    width: 100%;
-    text-align: center;
-  }
 
   .navbar {
     flex-direction: row;
@@ -234,6 +230,14 @@
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 
   .nav-links {
@@ -305,15 +309,6 @@
   }
 }
 
-/* Handle long text in input fields and textareas */
-input[type="text"],
-input[type="email"],
-textarea {
-  word-wrap: break-word;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
 
 /* Prevent overflowing in form and cards */
 .form-group input,
@@ -346,6 +341,45 @@ textarea {
 .ser-lft,
 .ser-rght {
   min-width: 0;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 2px;
+    display: none; /* Hide by default */
+    width: 100%;
+    background-color: #EDFFF0;
+    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
 
 
